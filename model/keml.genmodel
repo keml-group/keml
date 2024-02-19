@@ -44,5 +44,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//InformationRelationship/value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//InformationRelationship/type"/>
     </genClasses>
+    <genClasses ecoreClass="keml.ecore#//Conversation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference keml.ecore#//Conversation/swimLanes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//Conversation/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference keml.ecore#//Conversation/information"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

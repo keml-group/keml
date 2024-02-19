@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="keml" nsURI="http://www.uni-koblenz.de/keml" nsPrefix="keml">
   <eClassifiers xsi:type="ecore:EClass" name="NewInformation" eSuperTypes="#//Information"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SwimLane" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="SwimLane">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="xPosition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="executionSpecifications"
@@ -44,5 +44,12 @@
     <eLiterals name="REFERENCE" literal="REFERENCE"/>
     <eLiterals name="COMPOSITION" value="1" literal="COMPOSITION"/>
     <eLiterals name="ASSOCIATION" value="2" literal="ASSOCIATION"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Conversation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="swimLanes" upperBound="-1"
+        eType="#//SwimLane" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="information" upperBound="-1"
+        eType="#//Information" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

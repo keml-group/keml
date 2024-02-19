@@ -1,7 +1,19 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: keml
-Bundle-SymbolicName: keml; singleton:=true
+Bundle-Name: %pluginName
+Bundle-SymbolicName: keml;singleton:=true
+Automatic-Module-Name: keml
 Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Export-Package: org.eclipse.sirius.sample.keml,
+ org.eclipse.sirius.sample.keml.impl,
+ org.eclipse.sirius.sample.keml.util,
+ keml,
+ keml.impl,
+ keml.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
