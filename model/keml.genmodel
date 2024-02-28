@@ -16,7 +16,7 @@
     <genClasses ecoreClass="keml.ecore#//Conversation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//Conversation/title"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference keml.ecore#//Conversation/author"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference keml.ecore#//Conversation/conversationpartners"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference keml.ecore#//Conversation/conversationPartners"/>
     </genClasses>
     <genClasses ecoreClass="keml.ecore#//ConversationPartner"/>
     <genClasses image="false" ecoreClass="keml.ecore#//LifeLine">

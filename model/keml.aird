@@ -5,7 +5,7 @@
     <semanticResources>keml.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_rcQRcNFUEe6ntIcU--nu5A">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_rdJCQNFUEe6ntIcU--nu5A" name="keml" repPath="#_rc1gQNFUEe6ntIcU--nu5A" changeId="1709028085625">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_rdJCQNFUEe6ntIcU--nu5A" name="keml" repPath="#_rc1gQNFUEe6ntIcU--nu5A" changeId="1709111229857">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="keml.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -557,9 +557,9 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_55hzFtRkEe6c1NCG4w3Z_A" name="[0..*] conversationpartners" sourceNode="_8S8MYNRiEe6x1I29u6eDKQ" targetNode="_Tma58NRjEe6x1I29u6eDKQ">
-      <target xmi:type="ecore:EReference" href="keml.ecore#//Conversation/conversationpartners"/>
-      <semanticElements xmi:type="ecore:EReference" href="keml.ecore#//Conversation/conversationpartners"/>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_55hzFtRkEe6c1NCG4w3Z_A" name="[0..*] conversationPartners" sourceNode="_8S8MYNRiEe6x1I29u6eDKQ" targetNode="_Tma58NRjEe6x1I29u6eDKQ">
+      <target xmi:type="ecore:EReference" href="keml.ecore#//Conversation/conversationPartners"/>
+      <semanticElements xmi:type="ecore:EReference" href="keml.ecore#//Conversation/conversationPartners"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_55iaINRkEe6c1NCG4w3Z_A" description="_0mE8cNRkEe6c1NCG4w3Z_A" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_55iaItRkEe6c1NCG4w3Z_A" showIcon="false"/>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_55iaIdRkEe6c1NCG4w3Z_A" labelSize="6" showIcon="false" labelColor="39,76,114"/>
