@@ -1,55 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="keml" nsURI="http://www.uni-koblenz.de/keml" nsPrefix="keml">
-  <eClassifiers xsi:type="ecore:EClass" name="NewInformation" eSuperTypes="#//Information"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SwimLane">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="keml" nsURI="http://www.unikoblenz.de/keml" nsPrefix="keml">
+  <eClassifiers xsi:type="ecore:EClass" name="Conversation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="author" lowerBound="1"
+        eType="#//Author" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conversationpartners" upperBound="-1"
+        eType="#//ConversationPartner" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConversationPartner" eSuperTypes="#//LifeLine">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Conversation partners are for example the LLM and a web browser, more or less are possible"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LifeLine" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="LifeLines are defined by the UML standard as essential parts of a sequence diagram.&#xA;The xPosition positions the life line on the horizontal axis. Vertically, it starts as high as possible."/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="xPosition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="executionSpecifications"
-        lowerBound="1" upperBound="-1" eType="#//ExecutionSpecification" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Message">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+  <eClassifiers xsi:type="ecore:EClass" name="Author" eSuperTypes="#//LifeLine">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The human main author of the conversation"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="messageExecutions" upperBound="-1"
+        eType="#//MessageExecution" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="preknowledge" upperBound="-1"
+        eType="#//PreKnowledge" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SendMessage" eSuperTypes="#//MessageExecution"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ReceiveMessage" eSuperTypes="#//MessageExecution">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isInterrupted" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generates" upperBound="-1"
         eType="#//NewInformation" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExecutionSpecification">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="indexOnLane" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MessageExecution" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="yPosition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-        eType="#//Message" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
-        eType="#//Message" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="subexecution" eType="#//ExecutionSpecification"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="counterPart" lowerBound="1"
+        eType="#//ConversationPartner"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NewInformation" eSuperTypes="#//Information"/>
   <eClassifiers xsi:type="ecore:EClass" name="PreKnowledge" eSuperTypes="#//Information"/>
   <eClassifiers xsi:type="ecore:EClass" name="Information" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="usedBy" upperBound="-1"
-        eType="#//ExecutionSpecification"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isUsedOn" upperBound="-1"
+        eType="#//SendMessage"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="causes" upperBound="-1"
+        eType="#//InformationLink" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="InformationLinkType">
+    <eLiterals name="CONTRADICTION"/>
+    <eLiterals name="WEAKENING" value="1"/>
+    <eLiterals name="ENFORCEMENT" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InformationLink">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="linkText" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isInstruction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-        eType="#//InformationRelationship" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//InformationLinkType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
-        eType="#//InformationRelationship" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InformationRelationship">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//InformationRelationshipType"
-        defaultValueLiteral="REFERENCE"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="InformationRelationshipType">
-    <eLiterals name="REFERENCE" literal="REFERENCE"/>
-    <eLiterals name="COMPOSITION" value="1" literal="COMPOSITION"/>
-    <eLiterals name="ASSOCIATION" value="2" literal="ASSOCIATION"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Conversation">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="swimLanes" upperBound="-1"
-        eType="#//SwimLane" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="information" upperBound="-1"
-        eType="#//Information" containment="true"/>
+        eType="#//Information"/>
   </eClassifiers>
 </ecore:EPackage>

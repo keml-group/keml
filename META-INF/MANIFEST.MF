@@ -8,10 +8,7 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-21
-Export-Package: org.eclipse.sirius.sample.keml,
- org.eclipse.sirius.sample.keml.impl,
- org.eclipse.sirius.sample.keml.util,
- keml,
+Export-Package: keml,
  keml.impl,
  keml.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,

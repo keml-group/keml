@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated keml -->
       <package
-            uri="http://www.uni-koblenz.de/keml"
+            uri="http://www.unikoblenz.de/keml"
             class="keml.KemlPackage"
             genModel="model/keml.genmodel"/>
    </extension>

@@ -8,46 +8,47 @@
   <foreignModel>keml.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Keml" disposableProviderFactory="true" ecorePackage="keml.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="keml.ecore#//InformationRelationshipType">
-      <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationRelationshipType/REFERENCE"/>
-      <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationRelationshipType/COMPOSITION"/>
-      <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationRelationshipType/ASSOCIATION"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="keml.ecore#//InformationLinkType">
+      <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/CONTRADICTION"/>
+      <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/WEAKENING"/>
+      <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/ENFORCEMENT"/>
     </genEnums>
-    <genClasses image="false" ecoreClass="keml.ecore#//NewInformation"/>
-    <genClasses image="false" ecoreClass="keml.ecore#//SwimLane">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//SwimLane/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//SwimLane/xPosition"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference keml.ecore#//SwimLane/executionSpecifications"/>
+    <genClasses ecoreClass="keml.ecore#//Conversation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//Conversation/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference keml.ecore#//Conversation/author"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference keml.ecore#//Conversation/conversationpartners"/>
     </genClasses>
-    <genClasses ecoreClass="keml.ecore#//Message">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//Message/content"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference keml.ecore#//Message/source"/>
+    <genClasses ecoreClass="keml.ecore#//ConversationPartner"/>
+    <genClasses image="false" ecoreClass="keml.ecore#//LifeLine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//LifeLine/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//LifeLine/xPosition"/>
     </genClasses>
-    <genClasses ecoreClass="keml.ecore#//ExecutionSpecification">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//ExecutionSpecification/indexOnLane"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//ExecutionSpecification/yPosition"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference keml.ecore#//ExecutionSpecification/source"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference keml.ecore#//ExecutionSpecification/target"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//ExecutionSpecification/subexecution"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//ExecutionSpecification/length"/>
+    <genClasses ecoreClass="keml.ecore#//Author">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//Author/messageExecutions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference keml.ecore#//Author/preknowledge"/>
     </genClasses>
+    <genClasses ecoreClass="keml.ecore#//SendMessage"/>
+    <genClasses ecoreClass="keml.ecore#//ReceiveMessage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//ReceiveMessage/isInterrupted"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//ReceiveMessage/generates"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="keml.ecore#//MessageExecution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//MessageExecution/content"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//MessageExecution/yPosition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//MessageExecution/counterPart"/>
+    </genClasses>
+    <genClasses ecoreClass="keml.ecore#//NewInformation"/>
     <genClasses ecoreClass="keml.ecore#//PreKnowledge"/>
     <genClasses image="false" ecoreClass="keml.ecore#//Information">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//Information/content"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//Information/usedBy"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//Information/isInstruction"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference keml.ecore#//Information/source"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference keml.ecore#//Information/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//Information/isUsedOn"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//Information/message"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference keml.ecore#//Information/causes"/>
     </genClasses>
-    <genClasses ecoreClass="keml.ecore#//InformationRelationship">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//InformationRelationship/text"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//InformationRelationship/value"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//InformationRelationship/type"/>
-    </genClasses>
-    <genClasses ecoreClass="keml.ecore#//Conversation">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference keml.ecore#//Conversation/swimLanes"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//Conversation/title"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference keml.ecore#//Conversation/information"/>
+    <genClasses ecoreClass="keml.ecore#//InformationLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//InformationLink/linkText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//InformationLink/isInstruction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//InformationLink/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//InformationLink/target"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
