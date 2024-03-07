@@ -59,7 +59,8 @@
   <eClassifiers xsi:type="ecore:EEnum" name="InformationLinkType">
     <eLiterals name="CONTRADICTION"/>
     <eLiterals name="WEAKENING" value="1"/>
-    <eLiterals name="ENFORCEMENT" value="2"/>
+    <eLiterals name="SUPPLEMENT" value="2"/>
+    <eLiterals name="ENFORCEMENT" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InformationLink">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="linkText" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

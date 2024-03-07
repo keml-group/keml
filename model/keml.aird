@@ -5,7 +5,7 @@
     <semanticResources>keml.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_rcQRcNFUEe6ntIcU--nu5A">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_rdJCQNFUEe6ntIcU--nu5A" name="keml" repPath="#_rc1gQNFUEe6ntIcU--nu5A" changeId="1709216516687">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_rdJCQNFUEe6ntIcU--nu5A" name="keml" repPath="#_rc1gQNFUEe6ntIcU--nu5A" changeId="1709795840108">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="keml.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -158,9 +158,13 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_f8oqEdSiEe6YXfUilywXLg" fontName=".AppleSystemUIFont" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_f8oqEtSiEe6YXfUilywXLg"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_iRm9YNSiEe6YXfUilywXLg" type="3010" element="_iRj6ENSiEe6YXfUilywXLg">
-              <styles xmi:type="notation:FontStyle" xmi:id="_iRm9YdSiEe6YXfUilywXLg" fontName=".AppleSystemUIFont" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_iRm9YtSiEe6YXfUilywXLg"/>
+            <children xmi:type="notation:Node" xmi:id="_q3vLcNxSEe65R9UNTZMRSg" type="3010" element="_q3hJANxSEe65R9UNTZMRSg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_q3vLcdxSEe65R9UNTZMRSg" fontName=".AppleSystemUIFont" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_q3vLctxSEe65R9UNTZMRSg"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_tciDcNxSEe65R9UNTZMRSg" type="3010" element="_tcVPINxSEe65R9UNTZMRSg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_tciDcdxSEe65R9UNTZMRSg" fontName=".AppleSystemUIFont" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_tciDctxSEe65R9UNTZMRSg"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_UAtqotSiEe6YXfUilywXLg"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_UAtqo9SiEe6YXfUilywXLg"/>
@@ -811,10 +815,18 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_iRj6ENSiEe6YXfUilywXLg" name="ENFORCEMENT" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_q3hJANxSEe65R9UNTZMRSg" name="SUPPLEMENT" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="keml.ecore#//InformationLinkType/SUPPLEMENT"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="keml.ecore#//InformationLinkType/SUPPLEMENT"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_q3hwENxSEe65R9UNTZMRSg" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_tcVPINxSEe65R9UNTZMRSg" name="ENFORCEMENT" tooltipText="">
         <target xmi:type="ecore:EEnumLiteral" href="keml.ecore#//InformationLinkType/ENFORCEMENT"/>
         <semanticElements xmi:type="ecore:EEnumLiteral" href="keml.ecore#//InformationLinkType/ENFORCEMENT"/>
-        <ownedStyle xmi:type="diagram:BundledImage" uid="_iRj6EdSiEe6YXfUilywXLg" labelAlignment="LEFT">
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_tcV2MNxSEe65R9UNTZMRSg" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>

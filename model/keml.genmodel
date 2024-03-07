@@ -11,6 +11,7 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="keml.ecore#//InformationLinkType">
       <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/CONTRADICTION"/>
       <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/WEAKENING"/>
+      <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/SUPPLEMENT"/>
       <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/ENFORCEMENT"/>
     </genEnums>
     <genClasses ecoreClass="keml.ecore#//Conversation">
