@@ -9,10 +9,11 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Keml" disposableProviderFactory="true" ecorePackage="keml.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="keml.ecore#//InformationLinkType">
-      <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/CONTRADICTION"/>
-      <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/WEAKENING"/>
       <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/SUPPLEMENT"/>
-      <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/ENFORCEMENT"/>
+      <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/SUPPORT"/>
+      <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/ACCEPT"/>
+      <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/CHALLENGE"/>
+      <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/REJECT"/>
     </genEnums>
     <genClasses ecoreClass="keml.ecore#//Conversation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//Conversation/title"/>

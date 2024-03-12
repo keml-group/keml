@@ -58,10 +58,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isInstruction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="InformationLinkType">
-    <eLiterals name="CONTRADICTION"/>
-    <eLiterals name="WEAKENING" value="1"/>
-    <eLiterals name="SUPPLEMENT" value="2"/>
-    <eLiterals name="ENFORCEMENT" value="3"/>
+    <eLiterals name="SUPPLEMENT"/>
+    <eLiterals name="SUPPORT" value="1"/>
+    <eLiterals name="ACCEPT" value="2"/>
+    <eLiterals name="CHALLENGE" value="3"/>
+    <eLiterals name="REJECT" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InformationLink">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="linkText" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
