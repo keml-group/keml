@@ -8,3 +8,6 @@
 bin/
 src-gen/
 
+#intelliJ
+*.iml
+
