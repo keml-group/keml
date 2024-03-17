@@ -35,6 +35,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isInterrupted" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generates" upperBound="-1"
         eType="#//NewInformation" containment="true" eOpposite="#//NewInformation/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="repeats" upperBound="-1"
+        eType="#//NewInformation"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MessageExecution" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
