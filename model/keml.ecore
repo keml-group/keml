@@ -36,7 +36,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="generates" upperBound="-1"
         eType="#//NewInformation" containment="true" eOpposite="#//NewInformation/source"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="repeats" upperBound="-1"
-        eType="#//NewInformation"/>
+        eType="#//Information" eOpposite="#//Information/repeatedBy"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MessageExecution" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -55,13 +55,17 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="isUsedOn" upperBound="-1"
         eType="#//SendMessage"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="causes" upperBound="-1"
-        eType="#//InformationLink" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isInstruction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialTrust" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
         defaultValueLiteral="0.75"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentTrust" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
         defaultValueLiteral="0.75"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="repeatedBy" upperBound="-1"
+        eType="#//ReceiveMessage" eOpposite="#//ReceiveMessage/repeats"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetedBy" upperBound="-1"
+        eType="#//InformationLink" eOpposite="#//InformationLink/target"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="causes" upperBound="-1"
+        eType="#//InformationLink" containment="true" eOpposite="#//InformationLink/source"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="InformationLinkType">
     <eLiterals name="SUPPLEMENT"/>
@@ -74,6 +78,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="linkText" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//InformationLinkType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
-        eType="#//Information"/>
+        eType="#//Information" eOpposite="#//Information/targetedBy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Information" eOpposite="#//Information/causes"/>
   </eClassifiers>
 </ecore:EPackage>

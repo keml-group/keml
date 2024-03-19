@@ -52,15 +52,18 @@
     <genClasses image="false" ecoreClass="keml.ecore#//Information">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//Information/isUsedOn"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//Information/message"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference keml.ecore#//Information/causes"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//Information/isInstruction"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//Information/initialTrust"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//Information/currentTrust"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//Information/repeatedBy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//Information/targetedBy"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//Information/causes"/>
     </genClasses>
     <genClasses ecoreClass="keml.ecore#//InformationLink">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//InformationLink/linkText"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//InformationLink/type"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//InformationLink/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//InformationLink/source"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
