@@ -54,6 +54,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//Information/message"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference keml.ecore#//Information/causes"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//Information/isInstruction"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//Information/initialTrust"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//Information/currentTrust"/>
     </genClasses>
     <genClasses ecoreClass="keml.ecore#//InformationLink">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//InformationLink/linkText"/>
