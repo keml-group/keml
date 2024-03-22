@@ -11,9 +11,9 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="keml.ecore#//InformationLinkType">
       <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/SUPPLEMENT"/>
       <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/SUPPORT"/>
-      <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/ACCEPT"/>
-      <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/CHALLENGE"/>
-      <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/REJECT"/>
+      <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/STRONG_SUPPORT"/>
+      <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/ATTACK"/>
+      <genEnumLiterals ecoreEnumLiteral="keml.ecore#//InformationLinkType/STRONG_ATTACK"/>
     </genEnums>
     <genClasses ecoreClass="keml.ecore#//Conversation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//Conversation/title"/>

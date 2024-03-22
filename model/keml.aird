@@ -5,7 +5,7 @@
     <semanticResources>keml.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_rcQRcNFUEe6ntIcU--nu5A">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_rdJCQNFUEe6ntIcU--nu5A" name="keml" repPath="#_rc1gQNFUEe6ntIcU--nu5A" changeId="1711021173823">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_rdJCQNFUEe6ntIcU--nu5A" name="keml" repPath="#_rc1gQNFUEe6ntIcU--nu5A" changeId="1711094423338">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="keml.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -871,25 +871,25 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_bUZBUOCPEe6PJZTR5k798A" name="ACCEPT" tooltipText="">
-        <target xmi:type="ecore:EEnumLiteral" href="keml.ecore#//InformationLinkType/ACCEPT"/>
-        <semanticElements xmi:type="ecore:EEnumLiteral" href="keml.ecore#//InformationLinkType/ACCEPT"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_bUZBUOCPEe6PJZTR5k798A" name="STRONG_SUPPORT" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="keml.ecore#//InformationLinkType/STRONG_SUPPORT"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="keml.ecore#//InformationLinkType/STRONG_SUPPORT"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_bUZoYOCPEe6PJZTR5k798A" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_cqLvkOCPEe6PJZTR5k798A" name="CHALLENGE" tooltipText="">
-        <target xmi:type="ecore:EEnumLiteral" href="keml.ecore#//InformationLinkType/CHALLENGE"/>
-        <semanticElements xmi:type="ecore:EEnumLiteral" href="keml.ecore#//InformationLinkType/CHALLENGE"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_cqLvkOCPEe6PJZTR5k798A" name="ATTACK" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="keml.ecore#//InformationLinkType/ATTACK"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="keml.ecore#//InformationLinkType/ATTACK"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_cqLvkeCPEe6PJZTR5k798A" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_dxQsYOCPEe6PJZTR5k798A" name="REJECT" tooltipText="">
-        <target xmi:type="ecore:EEnumLiteral" href="keml.ecore#//InformationLinkType/REJECT"/>
-        <semanticElements xmi:type="ecore:EEnumLiteral" href="keml.ecore#//InformationLinkType/REJECT"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_dxQsYOCPEe6PJZTR5k798A" name="STRONG_ATTACK" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="keml.ecore#//InformationLinkType/STRONG_ATTACK"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="keml.ecore#//InformationLinkType/STRONG_ATTACK"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_dxQsYeCPEe6PJZTR5k798A" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>

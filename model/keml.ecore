@@ -70,9 +70,9 @@
   <eClassifiers xsi:type="ecore:EEnum" name="InformationLinkType">
     <eLiterals name="SUPPLEMENT"/>
     <eLiterals name="SUPPORT" value="1"/>
-    <eLiterals name="ACCEPT" value="2"/>
-    <eLiterals name="CHALLENGE" value="3"/>
-    <eLiterals name="REJECT" value="4"/>
+    <eLiterals name="STRONG_SUPPORT" value="2" literal="STRONG_SUPPORT"/>
+    <eLiterals name="ATTACK" value="3" literal="ATTACK"/>
+    <eLiterals name="STRONG_ATTACK" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InformationLink">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="linkText" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
