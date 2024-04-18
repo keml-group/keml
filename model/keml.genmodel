@@ -43,6 +43,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//MessageExecution/content"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//MessageExecution/timing"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//MessageExecution/counterPart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//MessageExecution/originalContent"/>
     </genClasses>
     <genClasses ecoreClass="keml.ecore#//NewInformation">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//NewInformation/source"/>

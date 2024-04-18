@@ -46,6 +46,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="timing" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="counterPart" lowerBound="1"
         eType="#//ConversationPartner"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="originalContent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NewInformation" eSuperTypes="#//Information">
     <eOperations name="getSourceConversationPartner" eType="#//ConversationPartner"/>
