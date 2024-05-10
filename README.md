@@ -1,50 +1,44 @@
 # KEML (model)
 
-KEML is an [Eclipse EMF project](https://projects.eclipse.org/projects/modeling.emf.emf) meaning it consists of a set of Eclipse Plugins that create several handy editors and analyzers for KEML files. Each of these parts forms a project of the [KEML group](https://gitlab.uni-koblenz.de/keml). You are currently viewing the **KEML model project**. It basically holds the central definition of the KEML model as an .ecore file.
+KEML is an [Eclipse EMF project](https://projects.eclipse.org/projects/modeling.emf.emf) meaning it consists of a set of Eclipse Plugins that create several handy editors and analyzers for KEML files. Each of these plugins forms a project of the [KEML group](https://gitlab.uni-koblenz.de/keml). You are currently viewing the **KEML model project**. It basically holds the central definition of the KEML model as an .ecore file and can be used to generate the model java classes and further projects (see ).
+
+## The KEML ecore model (semantics)
+
+![KEML model v1.0.0](model/keml-with-parts.jpg "KEML model in v1.0.0")
+
+KEML is designed to document LLM conversations (i.e. messages) and the knowledge gained from them.
+It combines two well-known modelling techniques, that is sequence diagrams for the **message part** and argumentation graphs for the **knowledge part**.
+Both techniques have been adapted to fit the specific needs of KEML.
+
+An in depth introduction of KEML is linked in the [group description](https://gitlab.uni-koblenz.de/keml).
+
 
 ## Requirements
 This project is an Eclipse Modeling project, meaning that it should be opened with [Eclipse Modeling Tools](https://www.eclipse.org/downloads/packages/release/2024-03/r/eclipse-modeling-tools). You can add those to an existing Eclipse installation or install them from scratch. More information on this is best retrieved by the eclipse foundation.
 
-## Model
-
-## Background
-
-
 ## Usage and Code Generation
+While this project defines the datatypes and their relations, [keml.edit](https://gitlab.uni-koblenz.de/keml/keml.edit) and **keml.editor** are necessary to actually work with the KEML files.
+The necessary KEML java classes and these two projects can be generated in Eclipse just based on this project's ecore file:
+1. Open the ecore file under model/keml.ecore/keml/keml with Eclipse Modeling Tools.
+This should open the graphical view you see above.
+2. On the graphical view right-click to open a dialogue.
+3. Choose the dialogue option Generate -> All to generate all relevant code of all three projects or single parts to generate just those.
 
- The two projects edit and editor can be generated in Eclipse just based on this file. Since edit had some customizations, it is recommended to fork it from this GitLab group.
+### Code generated under src-gen
+If you generate "Model Code" (or "All") this will (re-)generate all code in this project's folder **src-gen**. This folder is deliberately not checked in, since it just holds generated code.
+The generated code follows the Factory Pattern:
+There are java interfaces for each KEML type under src-gen/keml, and Impls for the types under src-gen/keml.impl.
 
+### Special care for keml.edit
+Since the keml edit project has some customizations, it is recommended to get it from the [keml.edit repository](https://gitlab.uni-koblenz.de/keml/keml.edit). A later code generation does not overwrite the changes brought in by the keml.edit repository.
+For more details, check keml.edit's repository documentation.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+### Learning how to use EMF Modeling Projects
+To read more about working with modeling projects and code generation, we highly recommend the Eclipse tutorial on [Domain Models](https://wiki.eclipse.org/Sirius/Tutorials/DomainModelTutorial).
 
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
 
 ## License
-For open source projects, say how it is licensed.
-
+The license of this project is that of the [group](https://gitlab.uni-koblenz.de/keml).
 
 ## Credits
-
 Project icon by <a href="https://www.flaticon.com/free-icons/camel" title="camel icons">Camel icons created by Freepik - Flaticon</a>
