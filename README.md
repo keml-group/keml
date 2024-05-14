@@ -1,6 +1,6 @@
 # KEML (model)
 
-KEML is an [Eclipse EMF project](https://projects.eclipse.org/projects/modeling.emf.emf) meaning it consists of a set of Eclipse Plugins that create several handy editors and analyzers for KEML files. Each of these plugins forms a project of the [KEML group](https://gitlab.uni-koblenz.de/keml). You are currently viewing the **KEML model project**. It basically holds the central definition of the KEML model as an .ecore file and can be used to generate the model java classes and further projects (see [Usage and Code Generation](#Usage-and-Code-Generation)).
+KEML is an [Eclipse EMF project](https://projects.eclipse.org/projects/modeling.emf.emf) meaning it consists of a set of Eclipse Plugins that create several handy editors and analyzers for KEML files. Each of these plugins forms a project of the [KEML group](https://gitlab.uni-koblenz.de/keml). You are currently viewing the **KEML model project**. It basically holds the central definition of the KEML model as an .ecore file and can be used to generate the model java classes and further projects (see [Code Generation](#Code-Generation)).
 
 ## The KEML ecore model (semantics)
 
@@ -16,7 +16,7 @@ An in depth introduction of KEML is available in the [group description](https:/
 ## Requirements
 This project is an Eclipse Modeling project, meaning that it should be opened with [Eclipse Modeling Tools](https://www.eclipse.org/downloads/packages/release/2024-03/r/eclipse-modeling-tools). You can add those to an existing Eclipse installation or install them from scratch. More information on this is best retrieved by the eclipse foundation.
 
-## Usage
+## Installation
 When using this project in Eclipse, make sure that it is correctly recognized as a Modeling Project (indicated by a small M on the project icon):
 
 1. Right-click on the project and select Properties
@@ -25,8 +25,12 @@ When using this project in Eclipse, make sure that it is correctly recognized as
 4. Apply and Close
 
 ## Code Generation
-While this project defines the datatypes and their relations, [keml.edit](https://gitlab.uni-koblenz.de/keml/keml.edit) and **keml.editor** are necessary to actually work with the KEML files.
-The KEML (datatype) java classes and these two projects can be generated in Eclipse just based on this project's ecore file:
+Based on the ecore file, you can generate code:
+* for all KEML java classes (data types), stored under src-gen
+* for the helper project [keml.edit](https://gitlab.uni-koblenz.de/keml/keml.edit)
+* for the keml.editor
+
+To generate code:
 1. Open the ecore file under model/keml.ecore/keml/keml in Eclipse Modeling Tools.
 This should open the graphical view you see above.
 2. On the graphical view right-click to open a dialogue.
