@@ -25,23 +25,23 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="The human main author of the conversation"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="messageExecutions" upperBound="-1"
-        eType="#//MessageExecution" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="messages" upperBound="-1"
+        eType="#//Message" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="preknowledge" upperBound="-1"
         eType="#//PreKnowledge" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SendMessage" eSuperTypes="#//MessageExecution">
+  <eClassifiers xsi:type="ecore:EClass" name="SendMessage" eSuperTypes="#//Message">
     <eStructuralFeatures xsi:type="ecore:EReference" name="uses" upperBound="-1" eType="#//Information"
         eOpposite="#//Information/isUsedOn"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ReceiveMessage" eSuperTypes="#//MessageExecution">
+  <eClassifiers xsi:type="ecore:EClass" name="ReceiveMessage" eSuperTypes="#//Message">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isInterrupted" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generates" upperBound="-1"
         eType="#//NewInformation" containment="true" eOpposite="#//NewInformation/source"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="repeats" upperBound="-1"
         eType="#//Information" eOpposite="#//Information/repeatedBy"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MessageExecution" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="Message" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="timing" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="counterPart" lowerBound="1"

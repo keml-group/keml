@@ -28,7 +28,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//LifeLine/xPosition"/>
     </genClasses>
     <genClasses ecoreClass="keml.ecore#//Author">
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//Author/messageExecutions"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//Author/messages"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference keml.ecore#//Author/preknowledge"/>
     </genClasses>
     <genClasses ecoreClass="keml.ecore#//SendMessage">
@@ -39,11 +39,11 @@
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//ReceiveMessage/generates"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//ReceiveMessage/repeats"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="keml.ecore#//MessageExecution">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//MessageExecution/content"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//MessageExecution/timing"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//MessageExecution/counterPart"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//MessageExecution/originalContent"/>
+    <genClasses image="false" ecoreClass="keml.ecore#//Message">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//Message/content"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//Message/timing"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//Message/counterPart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute keml.ecore#//Message/originalContent"/>
     </genClasses>
     <genClasses ecoreClass="keml.ecore#//NewInformation">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference keml.ecore#//NewInformation/source"/>

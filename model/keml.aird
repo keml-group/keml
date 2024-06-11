@@ -5,7 +5,7 @@
     <semanticResources>keml.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_rcQRcNFUEe6ntIcU--nu5A">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_rdJCQNFUEe6ntIcU--nu5A" name="keml" repPath="#_rc1gQNFUEe6ntIcU--nu5A" changeId="1713347485534">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_rdJCQNFUEe6ntIcU--nu5A" name="keml" repPath="#_rc1gQNFUEe6ntIcU--nu5A" changeId="1718106977000">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="keml.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -661,9 +661,9 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_LOwPINSJEe6YXfUilywXLg" name="MessageExecution" tooltipText="" outgoingEdges="_rAolDNSMEe6YXfUilywXLg" incomingEdges="_W7EP3NSKEe6YXfUilywXLg _XxEqxtSKEe6YXfUilywXLg _moKa1tSKEe6YXfUilywXLg" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="keml.ecore#//MessageExecution"/>
-      <semanticElements xmi:type="ecore:EClass" href="keml.ecore#//MessageExecution"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_LOwPINSJEe6YXfUilywXLg" name="Message" tooltipText="" outgoingEdges="_rAolDNSMEe6YXfUilywXLg" incomingEdges="_W7EP3NSKEe6YXfUilywXLg _XxEqxtSKEe6YXfUilywXLg _moKa1tSKEe6YXfUilywXLg" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="keml.ecore#//Message"/>
+      <semanticElements xmi:type="ecore:EClass" href="keml.ecore#//Message"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -673,24 +673,24 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_dQVlQNSJEe6YXfUilywXLg" name="content : EString" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="keml.ecore#//MessageExecution/content"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="keml.ecore#//MessageExecution/content"/>
+        <target xmi:type="ecore:EAttribute" href="keml.ecore#//Message/content"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="keml.ecore#//Message/content"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_eQNt49SJEe6YXfUilywXLg" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_iCN_4NSJEe6YXfUilywXLg" name="timing : EInt" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="keml.ecore#//MessageExecution/timing"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="keml.ecore#//MessageExecution/timing"/>
+        <target xmi:type="ecore:EAttribute" href="keml.ecore#//Message/timing"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="keml.ecore#//Message/timing"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_jSBa49SJEe6YXfUilywXLg" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="__4BE4PyfEe6ROaFvc0CK-A" name="originalContent : EString" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="keml.ecore#//MessageExecution/originalContent"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="keml.ecore#//MessageExecution/originalContent"/>
+        <target xmi:type="ecore:EAttribute" href="keml.ecore#//Message/originalContent"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="keml.ecore#//Message/originalContent"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_DgQW4_ygEe6ROaFvc0CK-A" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
@@ -721,9 +721,9 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_moKa1tSKEe6YXfUilywXLg" name="[0..*] messageExecutions" sourceNode="_zMCc0NRjEe6x1I29u6eDKQ" targetNode="_LOwPINSJEe6YXfUilywXLg">
-      <target xmi:type="ecore:EReference" href="keml.ecore#//Author/messageExecutions"/>
-      <semanticElements xmi:type="ecore:EReference" href="keml.ecore#//Author/messageExecutions"/>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_moKa1tSKEe6YXfUilywXLg" name="[0..*] messages" sourceNode="_zMCc0NRjEe6x1I29u6eDKQ" targetNode="_LOwPINSJEe6YXfUilywXLg">
+      <target xmi:type="ecore:EReference" href="keml.ecore#//Author/messages"/>
+      <semanticElements xmi:type="ecore:EReference" href="keml.ecore#//Author/messages"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_vXRgEtSKEe6YXfUilywXLg" description="_0mE8cNRkEe6c1NCG4w3Z_A" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_vXRgFNSKEe6YXfUilywXLg" showIcon="false"/>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_vXRgE9SKEe6YXfUilywXLg" labelSize="6" showIcon="false" labelColor="39,76,114"/>
@@ -731,8 +731,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_rAolDNSMEe6YXfUilywXLg" name="[1..1] counterPart" sourceNode="_LOwPINSJEe6YXfUilywXLg" targetNode="_Tma58NRjEe6x1I29u6eDKQ">
-      <target xmi:type="ecore:EReference" href="keml.ecore#//MessageExecution/counterPart"/>
-      <semanticElements xmi:type="ecore:EReference" href="keml.ecore#//MessageExecution/counterPart"/>
+      <target xmi:type="ecore:EReference" href="keml.ecore#//Message/counterPart"/>
+      <semanticElements xmi:type="ecore:EReference" href="keml.ecore#//Message/counterPart"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_x-vKNdSNEe6YXfUilywXLg" description="_x-vKMtSNEe6YXfUilywXLg" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_x-vKN9SNEe6YXfUilywXLg" showIcon="false">
           <labelFormat>bold</labelFormat>
