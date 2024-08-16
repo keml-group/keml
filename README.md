@@ -4,13 +4,13 @@ KEML is an [Eclipse EMF project](https://projects.eclipse.org/projects/modeling.
 
 ## The KEML ecore model (semantics)
 
-![KEML model v1.0.0](model/keml-with-parts.jpg "KEML model in v1.0.0")
+![KEML model v2.0.0](model/keml.jpg "KEML model in v2.0.0")
 
 KEML is designed to document LLM conversations (i.e. messages) and the knowledge gained from them.
 It combines two well-known modelling techniques, that is sequence diagrams for the **message part** and argumentation graphs for the **knowledge part**.
 Both techniques have been adapted to fit the specific needs of KEML.
 
-An in depth introduction of KEML is available in the [group description](https://gitlab.uni-koblenz.de/keml).
+An in depth introduction of KEML is available in our [introductory paper](https://doi.org/10.1145/3652620.3687809).
 
 
 ## Requirements
@@ -27,7 +27,7 @@ When using this project in Eclipse, make sure that it is correctly recognized as
 ## Code Generation
 Based on the ecore file, you can generate code:
 * for all KEML java classes (data types), stored under src-gen
-* for the helper project [keml.edit](https://gitlab.uni-koblenz.de/keml/keml.edit)
+* for the helper project [keml.edit](https://github.com/keml-group/keml.edit)
 * for the keml.editor
 
 To generate code:
@@ -42,7 +42,7 @@ The generated code follows the Factory Pattern:
 There are java interfaces for each KEML type under src-gen/keml, and Impls for the types under src-gen/keml.impl.
 
 ### Special care for keml.edit
-Since the keml edit project has some customizations, it is recommended to get it from the [keml.edit repository](https://gitlab.uni-koblenz.de/keml/keml.edit). A later code generation does not overwrite the changes brought in by the keml.edit repository.
+Since the keml edit project has some customizations, it is recommended to get it from the [keml.edit repository](https://github.com/keml-group/keml.edit). A later code generation does not overwrite the changes brought in by the keml.edit repository.
 For more details, check keml.edit's repository documentation.
 
 ### Learning how to use EMF Modeling Projects
@@ -50,7 +50,4 @@ To read more about working with modeling projects and code generation, we highly
 
 
 ## License
-The license of this project is that of the [group](https://gitlab.uni-koblenz.de/keml).
-
-## Credits
-Project icon by <a href="https://www.flaticon.com/free-icons/camel" title="camel icons">Camel icons created by Freepik - Flaticon</a>
+The license of this project is that of the [group](https://github.com/keml-group).
