@@ -1,6 +1,6 @@
 # KEML (model)
 
-KEML is an [Eclipse EMF project](https://projects.eclipse.org/projects/modeling.emf.emf) meaning it consists of a set of Eclipse Plugins that create several handy editors and analyzers for KEML files. Each of these plugins forms a project of the [KEML group](https://gitlab.uni-koblenz.de/keml). You are currently viewing the **KEML model project**. It basically holds the central definition of the KEML model as an .ecore file and can be used to generate the model java classes and further projects (see [Code Generation](#Code-Generation)).
+KEML is an [Eclipse EMF project](https://projects.eclipse.org/projects/modeling.emf.emf) meaning it consists of a set of Eclipse Plugins that create several handy editors and analyzers for KEML files. Each of these plugins forms a project of the [KEML group](https://github.com/keml-group). You are currently viewing the **KEML model project**. It basically holds the central definition of the KEML model as an .ecore file and can be used to generate the model java classes and further projects (see [Code Generation](#Code-Generation)).
 
 ## The KEML ecore model (semantics)
 
@@ -10,7 +10,7 @@ KEML is designed to document LLM conversations (i.e. messages) and the knowledge
 It combines two well-known modelling techniques, that is sequence diagrams for the **message part** and argumentation graphs for the **knowledge part**.
 Both techniques have been adapted to fit the specific needs of KEML.
 
-An in depth introduction of KEML is available in our [introductory paper](https://doi.org/10.1145/3652620.3687809).
+An in depth introduction of KEML will be available in our [introductory paper](https://doi.org/10.1145/3652620.3687809) - that will be published in September 2024.
 
 
 ## Requirements
