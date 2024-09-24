@@ -1,6 +1,6 @@
-# KEML (model)
+# KEML (metamodel)
 
-KEML is an [Eclipse EMF project](https://projects.eclipse.org/projects/modeling.emf.emf) meaning it consists of a set of Eclipse Plugins that create several handy editors and analyzers for KEML files. Each of these plugins forms a project of the [KEML group](https://github.com/keml-group). You are currently viewing the **KEML model project**. It basically holds the central definition of the KEML model as an .ecore file and can be used to generate the model java classes and further projects (see [Code Generation](#Code-Generation)).
+KEML is an [Eclipse EMF project](https://projects.eclipse.org/projects/modeling.emf.emf) meaning it consists of a set of Eclipse Plugins that create several handy editors and analyzers for KEML files. Each of these plugins forms a project of the [KEML group](https://github.com/keml-group). You are currently viewing the **KEML model project**. It basically holds the central definition of the KEML metamodel as an .ecore file and can be used to generate the model java classes and further projects (see [Code Generation](#Code-Generation)).
 
 ## The KEML ecore model (semantics)
 
@@ -23,6 +23,13 @@ When using this project in Eclipse, make sure that it is correctly recognized as
 2. Choose Project Natures
 3. Add the Modeling Nature
 4. Apply and Close
+
+Also check if the Maven nature is correctly configured. You will get class not found errors if it is not. Just adding the maven nature like the modeling nature before did not work on Eclipse 2023-12. Instead one should:
+
+1. Right-click on the project and select Configure
+2. Choose Convert to Maven Project
+
+Afterwards, the project can be compiled and executed.
 
 ## Code Generation
 Based on the ecore file, you can generate code:
