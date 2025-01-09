@@ -4,7 +4,7 @@ KEML is an [Eclipse EMF project](https://projects.eclipse.org/projects/modeling.
 
 ## The KEML ecore model (semantics)
 
-![KEML model v2.0.0](model/keml.jpg "KEML model in v2.0.0")
+![KEML model v2.0.0](model/keml-with-parts.jpg "KEML model in v2.0.0")
 
 KEML is designed to document LLM conversations (i.e. messages) and the knowledge gained from them.
 It combines two well-known modelling techniques, that is sequence diagrams for the **message part** and argumentation graphs for the **knowledge part**.
