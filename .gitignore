@@ -11,3 +11,5 @@ src-gen/
 #intelliJ
 *.iml
 
+/target/
+/pom.xml
