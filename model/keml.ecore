@@ -70,6 +70,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="feltTrustAfterwards" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialTrust" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentTrust" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="asLiterals" lowerBound="2"
+        upperBound="2" eType="#//Literal" containment="true" eOpposite="#//Literal/source"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="InformationLinkType">
     <eLiterals name="SUPPLEMENT"/>
@@ -77,6 +79,9 @@
     <eLiterals name="STRONG_SUPPORT" value="2" literal="STRONG_SUPPORT"/>
     <eLiterals name="ATTACK" value="3" literal="ATTACK"/>
     <eLiterals name="STRONG_ATTACK" value="4"/>
+    <eLiterals name="IMPLICATION" value="5"/>
+    <eLiterals name="TNEGATED_IMPLICATION" value="6"/>
+    <eLiterals name="SNEGATED_IMPLICATION" value="7"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InformationLink">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="linkText" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -85,5 +90,20 @@
         eType="#//Information" eOpposite="#//Information/targetedBy"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
         eType="#//Information" eOpposite="#//Information/causes"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LogicExpression" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Literal" eSuperTypes="#//LogicExpression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="negated" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="usedInJunctions" upperBound="-1"
+        eType="#//Junction" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="premises" upperBound="-1"
+        eType="#//LogicExpression"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//Information" eOpposite="#//Information/asLiterals"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Junction" eSuperTypes="#//LogicExpression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="disjunction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="content" upperBound="-1"
+        eType="#//LogicExpression"/>
   </eClassifiers>
 </ecore:EPackage>
