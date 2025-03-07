@@ -58,10 +58,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Information" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isInstruction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialTrust" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
-        defaultValueLiteral="0.75"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentTrust" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
-        defaultValueLiteral="0.75"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="repeatedBy" upperBound="-1"
         eType="#//ReceiveMessage" eOpposite="#//ReceiveMessage/repeats"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetedBy" upperBound="-1"
@@ -72,6 +68,8 @@
         eType="#//SendMessage" eOpposite="#//SendMessage/uses"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="feltTrustImmediately" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="feltTrustAfterwards" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialTrust" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentTrust" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="InformationLinkType">
     <eLiterals name="SUPPLEMENT"/>
