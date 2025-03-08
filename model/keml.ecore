@@ -55,7 +55,7 @@
         eType="#//ReceiveMessage" eOpposite="#//ReceiveMessage/generates"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PreKnowledge" eSuperTypes="#//Information"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Information" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="Information" abstract="true" eSuperTypes="#//ITargetable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isInstruction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialTrust" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
@@ -64,12 +64,12 @@
         defaultValueLiteral="0.75"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="repeatedBy" upperBound="-1"
         eType="#//ReceiveMessage" eOpposite="#//ReceiveMessage/repeats"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="targetedBy" upperBound="-1"
-        eType="#//InformationLink" eOpposite="#//InformationLink/target"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="causes" upperBound="-1"
         eType="#//InformationLink" containment="true" eOpposite="#//InformationLink/source"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="isUsedOn" upperBound="-1"
         eType="#//SendMessage" eOpposite="#//SendMessage/uses"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="feltTrustImmediately" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="feltTrustAfterwards" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="InformationLinkType">
     <eLiterals name="SUPPLEMENT"/>
@@ -78,12 +78,16 @@
     <eLiterals name="ATTACK" value="3" literal="ATTACK"/>
     <eLiterals name="STRONG_ATTACK" value="4"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InformationLink">
+  <eClassifiers xsi:type="ecore:EClass" name="InformationLink" eSuperTypes="#//ITargetable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="linkText" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//InformationLinkType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
-        eType="#//Information" eOpposite="#//Information/targetedBy"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
         eType="#//Information" eOpposite="#//Information/causes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//ITargetable" eOpposite="#//ITargetable/targetedBy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ITargetable" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetedBy" upperBound="-1"
+        eType="#//InformationLink" eOpposite="#//InformationLink/target"/>
   </eClassifiers>
 </ecore:EPackage>
