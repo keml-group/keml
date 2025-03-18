@@ -1,13 +1,15 @@
-# KEML (metamodel)
+# Logic-based KEML (metamodel)
 
+**Note:** This branch features an alternative [KEML](https://github.com/keml-group/) component that leverages a logic-based argumentation framework (**LAF**), and is currently *only* tested for use in conjunction with the other LAF components of KEML. For the corresponding base version of this component, see the [base keml](https://github.com/keml-group/keml) repository.
+-----------------------
 KEML is an [Eclipse EMF project](https://projects.eclipse.org/projects/modeling.emf.emf) meaning it consists of a set of Eclipse Plugins that create several handy editors and analyzers for KEML files. Each of these plugins forms a project of the [KEML group](https://github.com/keml-group). You are currently viewing the **KEML model project**. It basically holds the central definition of the KEML metamodel as an .ecore file and can be used to generate the model java classes and further projects (see [Code Generation](#Code-Generation)).
 
 ## The KEML ecore model (semantics)
 
-![KEML model v2.0.0](model/keml-with-parts.png "KEML model in v2.0.0")
+![LAF KEML model v2.0.0](model/LAFkeml-with-parts.jpg "LAF KEML model in v2.0.0")
 
 KEML is designed to document LLM conversations (i.e. messages) and the knowledge gained from them.
-It combines two well-known modelling techniques, that is sequence diagrams for the **message part** and argumentation graphs for the **knowledge part**.
+It combines two well-known modelling techniques, that is sequence diagrams for the **message part** and argumentation graphs for the **knowledge part**. The latter is extended in this *LAF*-version to support the modeling of logical arguments.  
 Both techniques have been adapted to fit the specific needs of KEML.
 
 An in depth introduction of KEML will be available in our [introductory paper](https://doi.org/10.1145/3652620.3687809) - that will be published in September 2024.
