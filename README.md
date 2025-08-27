@@ -4,7 +4,7 @@ KEML is an [Eclipse EMF project](https://projects.eclipse.org/projects/modeling.
 
 ## The KEML ecore model (semantics)
 
-![KEML model v2.0.0](model/keml-with-parts.png "KEML model in v2.0.0")
+![KEML model v2.0.0](model/keml.png "KEML model in v2.0.0")
 
 KEML is designed to document LLM conversations (i.e. messages) and the knowledge gained from them.
 It combines two well-known modelling techniques, that is sequence diagrams for the **message part** and argumentation graphs for the **knowledge part**.
@@ -47,6 +47,10 @@ This should open the graphical view you see above.
 If you generate "Model Code" (or "All") this will (re-)generate all code in this project's folder **src-gen**. This folder is deliberately not checked in, since it just holds generated code.
 The generated code follows the Factory Pattern:
 There are java interfaces for each KEML type under src-gen/keml, and Impls for the types under src-gen/keml.impl.
+
+### Argumentation Framework Extension Recursive Edges
+This extensions allows users to model edges that points to edges, so called recursive edges. These extend the previous framework with modelling attempts for "find a solution-tasks.
+In graphML, a small workaround is required (see keml.io/README.md). All models created for the previous framework will work with this extension as well!
 
 ### Special care for keml.edit
 Since the keml edit project has some customizations, it is recommended to get it from the [keml.edit repository](https://github.com/keml-group/keml.edit). A later code generation does not overwrite the changes brought in by the keml.edit repository.
